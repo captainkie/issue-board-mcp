@@ -1,0 +1,8 @@
+{
+  "name": "issue-board-mcp",
+  "owner": { "name": "captainkie" },
+  "description": "Connect Claude Code to an issue board's MCP server with a personal token.",
+  "plugins": [
+    { "name": "issue-board", "source": "./plugins/issue-board", "description": "Report, triage, fix and verify issues on an issue board from Claude." }
+  ]
+}

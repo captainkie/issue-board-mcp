@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "issue-board": {
+      "type": "http",
+      "url": "${user_config.server_url}",
+      "headers": { "Authorization": "Bearer ${user_config.token}" }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Commit messages are only fully visible here, and this is the last stop before
+# they become permanent public history.
+set -euo pipefail
+node scripts/check-no-leaks.mjs

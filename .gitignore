@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.omc/
+**/.omc/
+.DS_Store
+.leak-denylist

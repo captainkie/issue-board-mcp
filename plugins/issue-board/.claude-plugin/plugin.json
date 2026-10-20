@@ -1,0 +1,14 @@
+{
+  "name": "issue-board",
+  "displayName": "Issue Board",
+  "version": "1.0.0",
+  "description": "Report, triage, fix and verify issues on an issue board through its MCP server.",
+  "author": { "name": "captainkie" },
+  "repository": "https://github.com/captainkie/issue-board-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "qa", "issues"],
+  "userConfig": {
+    "server_url": { "type": "string", "title": "Server URL", "description": "The MCP endpoint you were given, e.g. https://board.example.com/mcp", "required": true },
+    "token": { "type": "string", "title": "Personal token", "description": "Your personal token from the board's token page (starts with qat_). Stored in your OS keychain.", "sensitive": true, "required": true }
+  }
+}

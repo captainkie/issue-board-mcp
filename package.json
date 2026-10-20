@@ -1,0 +1,12 @@
+{
+  "name": "issue-board-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "check:leaks": "node scripts/check-no-leaks.mjs",
+    "pack:desktop": "npx -y @anthropic-ai/mcpb@2.1.2 pack desktop dist/issue-board.mcpb"
+  }
+}

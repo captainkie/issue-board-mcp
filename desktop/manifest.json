@@ -1,0 +1,24 @@
+{
+  "manifest_version": "0.3",
+  "name": "issue-board",
+  "display_name": "Issue Board",
+  "version": "1.0.0",
+  "description": "Connect Claude Desktop to an issue board's MCP server over HTTPS with a personal token.",
+  "author": { "name": "captainkie" },
+  "repository": { "type": "git", "url": "https://github.com/captainkie/issue-board-mcp" },
+  "license": "MIT",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": { "ISSUE_BOARD_URL": "${user_config.server_url}", "ISSUE_BOARD_TOKEN": "${user_config.token}" }
+    }
+  },
+  "user_config": {
+    "server_url": { "type": "string", "title": "Server URL", "description": "The MCP endpoint you were given, e.g. https://board.example.com/mcp", "required": true },
+    "token": { "type": "string", "title": "Personal token", "description": "Your personal token from the board's token page (starts with qat_).", "sensitive": true, "required": true }
+  },
+  "compatibility": { "platforms": ["darwin", "win32", "linux"], "runtimes": { "node": ">=18.0.0" } }
+}
